@@ -97,7 +97,8 @@ class ListTileTheme extends InheritedWidget {
   /// ```
   static ListTileTheme of(BuildContext context) {
     final ListTileTheme result =
-        context.dependOnInheritedWidgetOfExactType<ListTileTheme>();
+    context.inheritFromWidgetOfExactType(ListTileTheme);
+        // context.dependOnInheritedWidgetOfExactType<ListTileTheme>();
     return result ?? const ListTileTheme();
   }
 
